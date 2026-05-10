@@ -754,3 +754,35 @@ input[type=submit]:focus{
     width: 1.5%;
     text-align: center;
 }
+
+/* ─── Фікс розміру слайдів ─────────────────── */
+
+.tm-imgslider .slick-slide > div {
+    line-height: 0;     /* прибирає зазор під зображенням */
+    font-size: 0;
+}
+
+.tm-imgslider .tm-slider {
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+}
+
+.tm-imgslider .tm-sliderimage {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 100vh;  /* не більше висоти екрану */
+    object-fit: cover;
+}
+
+.tm-imgslider .tm-slidertext {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    white-space: nowrap;
+    line-height: normal;
+    font-size: 1rem;
+}
