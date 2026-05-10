@@ -106,8 +106,20 @@
     color: #fff;
     white-space: nowrap;
     line-height: normal !important;
-    font-size: 1rem !important;
     z-index: 5;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* тінь щоб текст видно на будь-якому фото */
+}
+
+.bold {
+    padding-bottom: 5px;
+    font-size: 2.5vw !important;
+    font-weight: 900;
+    line-height: 1.2 !important;
+}
+
+.simple {
+    font-size: 1.8vw !important;
+    line-height: 1.4 !important;
 }
 
 .tm-imgslider .left,
