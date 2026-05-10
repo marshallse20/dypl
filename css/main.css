@@ -67,7 +67,7 @@
 /* Slick генерує .slick-list і .slick-track автоматично */
 .tm-imgslider .slick-list {
     overflow: hidden;
-    width: 70%;
+    width: 100%;
     display: block;
     margin: 0;
     padding: 0;
@@ -81,18 +81,18 @@
  
 .tm-imgslider .slick-slide {
     position: relative;
-    min-width: 70%;
+    min-width: 100%;
     float: none;            /* скасовуємо float який slick ставить за замовчуванням */
     height: auto;
 }
  
 /* внутрішня обгортка яку slick додає */
 .tm-imgslider .slick-slide > div {
-    width: 70%;
+    width: 100%;
 }
  
 .tm-sliderimage {
-    width: 70%;
+    width: 100%;
     display: block;
 }
  
