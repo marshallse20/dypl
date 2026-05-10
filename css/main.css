@@ -92,7 +92,7 @@
 /* ← ось головний фікс */
 .tm-imgslider .slick-slide img.tm-sliderimage {
     width: 100% !important;
-    height: 350px !important;
+    height: 300px !important;
     display: block !important;
     object-fit: cover !important;
     object-position: center top;
