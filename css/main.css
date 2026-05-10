@@ -51,6 +51,84 @@
 }
 
 /*header ends here and sections start*/
+/* ─── Slick slider fix ─────────────────────────── */
+
+.tm-imgslider {
+    position: relative;
+    overflow: hidden;   /* головне — обрізає слайди що виїжджають за межі */
+    width: 100%;
+}
+
+/* обгортка треку що генерує slick */
+.tm-imgslider .slick-list {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+}
+
+.tm-imgslider .slick-track {
+    display: flex;      /* слайди в рядок */
+    flex-wrap: nowrap;
+}
+
+/* кожен слайд */
+.tm-imgslider .slick-slide {
+    min-width: 100%;
+    float: none;        /* скасовуємо float який slick ставить за замовчуванням */
+}
+
+.tm-imgslider .slick-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* стрілки slick */
+.tm-imgslider .slick-prev,
+.tm-imgslider .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(13, 17, 23, 0.6);
+    border: none;
+    color: #38bdf8;
+    font-size: 0;           /* ховаємо текст "Previous / Next" */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.tm-imgslider .slick-prev { left: 15px; }
+.tm-imgslider .slick-next { right: 15px; }
+
+/* стрілки — псевдоелементи замість тексту */
+.tm-imgslider .slick-prev::before {
+    content: '‹';
+    font-size: 28px;
+    line-height: 40px;
+    color: #38bdf8;
+}
+.tm-imgslider .slick-next::before {
+    content: '›';
+    font-size: 28px;
+    line-height: 40px;
+    color: #38bdf8;
+}
+
+.tm-imgslider:hover .slick-prev,
+.tm-imgslider:hover .slick-next {
+    opacity: 1;
+}
+
+/* старі класи .left / .right — вимикаємо щоб не конфліктували */
+.tm-imgslider .left,
+.tm-imgslider .right {
+    display: none;
+}
 
 /* slider */
 .tm-slider{
