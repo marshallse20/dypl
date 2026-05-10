@@ -93,7 +93,7 @@
  
 .tm-sliderimage {
     width: 100%;
-    height: 500px;        /* фіксована висота слайдера */
+    height: 350px;        /* фіксована висота слайдера */
     display: block;
     object-fit: cover;    /* обрізає фото пропорційно, без розтягування */
     object-position: center;
