@@ -772,7 +772,7 @@ input[type=submit]:focus{
     width: 100%;
     height: auto;
     display: block;
-    max-height: 100vh;  /* не більше висоти екрану */
+    max-height: 70vh;  /* не більше висоти екрану */
     object-fit: cover;
 }
 
