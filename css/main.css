@@ -56,15 +56,14 @@
 /* ══════════════════════════════════════════════
    ГОЛОВНИЙ СЛАЙДЕР — повний фікс
    ══════════════════════════════════════════════ */
- 
+
 .tm-imgslider {
     position: relative;
-    overflow: hidden;       /* обрізає всі слайди що виходять за межі */
+    overflow: hidden;
     width: 100%;
     display: block;
 }
- 
-/* Slick генерує .slick-list і .slick-track автоматично */
+
 .tm-imgslider .slick-list {
     overflow: hidden;
     width: 100%;
@@ -72,41 +71,45 @@
     margin: 0;
     padding: 0;
 }
- 
+
 .tm-imgslider .slick-track {
-    display: flex;          /* слайди горизонтально в рядок */
+    display: flex !important;
     flex-wrap: nowrap;
     align-items: stretch;
 }
- 
+
 .tm-imgslider .slick-slide {
     position: relative;
-    min-width: 100%;
-    float: none;            /* скасовуємо float який slick ставить за замовчуванням */
+    float: none;
     height: auto;
 }
- 
-/* внутрішня обгортка яку slick додає */
+
 .tm-imgslider .slick-slide > div {
-    width: 100%;
+    line-height: 0;
+    font-size: 0;
 }
- 
-.tm-sliderimage {
-    width: 100%;
-    height: 350px;        /* фіксована висота слайдера */
-    display: block;
-    object-fit: cover;    /* обрізає фото пропорційно, без розтягування */
-    object-position: center;
+
+/* ← ось головний фікс */
+.tm-imgslider .slick-slide img.tm-sliderimage {
+    width: 100% !important;
+    height: 500px !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center top;
 }
- 
+
 .tm-slidertext {
     position: absolute;
     top: 30%;
     left: 50%;
+    transform: translateX(-50%);
     color: #fff;
+    white-space: nowrap;
+    line-height: normal !important;
+    font-size: 1rem !important;
+    z-index: 5;
 }
- 
-/* кастомні стрілки — позиціонуємо поверх слайдера */
+
 .tm-imgslider .left,
 .tm-imgslider .right {
     position: absolute;
@@ -121,23 +124,13 @@
     transition: opacity 0.25s ease-in-out;
     padding: 0;
 }
- 
+
 .tm-imgslider .left  { left: 2%;  }
 .tm-imgslider .right { right: 2%; }
- 
+
 .tm-imgslider:hover .left,
 .tm-imgslider:hover .right {
     opacity: 1;
-}
- 
-.bold{
-    padding-bottom: 5px;
-    font-size: 3vw;
-    font-weight: 900;
-}
- 
-.simple{
-    font-size: 2.5vw;
 }
  
  
