@@ -814,3 +814,20 @@ input[type=submit]:focus{
 /* ─── Фікс секції кімнат (flex) ────────────── */
 section.slider.room.flex {
     overflow: hidden;
+
+.tm-room1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.tm-room1 .tm-roomimage {
+    width: 100%;
+    height: 300px;        /* однакова висота для всіх фото */
+    object-fit: cover;    /* обрізає пропорційно без розтягування */
+    object-position: center;
+    display: block;
+}
+
+.tm-room1 p {
+    margin-top: auto;     /* текст завжди внизу */
+}
