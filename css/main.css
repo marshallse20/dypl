@@ -814,6 +814,7 @@ input[type=submit]:focus{
 /* ─── Фікс секції кімнат (flex) ────────────── */
 section.slider.room.flex {
     overflow: hidden;
+}
 
 .tm-room1 {
     display: flex;
