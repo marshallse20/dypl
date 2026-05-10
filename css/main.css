@@ -771,8 +771,7 @@ input[type=submit]:focus{
 .tm-imgslider .tm-sliderimage {
     width: 100%;
     height: auto;
-    display: block;
-    max-height: 70vh;  /* не більше висоти екрану */
+    display: block;  /* не більше висоти екрану */
     object-fit: cover;
 }
 
